@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request
-from textblob import TextBlob
+from transformers import pipeline
 
 app = Flask(__name__)
+
+# Load the pre-trained sentiment analysis model
+sentiment_pipeline = pipeline("sentiment-analysis", model="cardiffnlp/twitter-roberta-base-sentiment-latest")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -10,11 +13,12 @@ def index():
 
     if request.method == "POST":
         text = request.form["message"]
-        analysis = TextBlob(text)
+        result = sentiment_pipeline(text)[0]
+        label = result['label']
 
-        if analysis.sentiment.polarity > 0:
+        if label == 'LABEL_2':
             sentiment = "Positive 😊"
-        elif analysis.sentiment.polarity < 0:
+        elif label == 'LABEL_0':
             sentiment = "Negative 😠"
         else:
             sentiment = "Neutral 😐"
