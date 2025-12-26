@@ -1,0 +1,3 @@
+flask //lpython framework
+textblolb //library for text processing and sentiment analysis
+gunicorn //WSGI HTTP server for running Python web applications
