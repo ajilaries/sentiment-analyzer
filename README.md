@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sentiment Analyzer
 
 A simple web application built with Flask that analyzes the sentiment of user-inputted text using TextBlob. It classifies text as Positive 😊, Negative 😠, or Neutral 😐.
@@ -63,3 +64,7 @@ To deploy this app live on Render:
 ## License
 
 MIT License
+=======
+# sentiment-analyzer
+Real-time sentiment analysis web app using Python, Flask, and NLP to classify text as positive, negative, or neutral.
+>>>>>>> origin/main
