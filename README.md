@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-# Sentiment Analyzer
+# Sentiment Analyzer v2.0
 
-A simple web application built with Flask that analyzes the sentiment of user-inputted text using TextBlob. It classifies text as Positive 😊, Negative 😠, or Neutral 😐.
+A simple web application built with Flask that analyzes the sentiment of user-inputted text using a pre-trained machine learning model from Hugging Face. It classifies text as Positive 😊, Negative 😠, or Neutral 😐.
 
 ## Features
 
-- Real-time sentiment analysis
+- Real-time sentiment analysis using advanced ML model
 - Clean, responsive web interface
 - Easy to deploy and run
 
@@ -44,10 +43,13 @@ The interface consists of:
 ## Technologies Used
 
 - Flask (Python web framework)
-- TextBlob (NLP library for sentiment analysis)
+- Hugging Face Transformers (NLP library for sentiment analysis)
+- PyTorch (Deep learning framework)
 - HTML/CSS (Frontend)
 
 ## Deployment
+
+The app is now live on Render at: https://sentiment-analyzer-h6t1.onrender.com
 
 To deploy this app live on Render:
 
@@ -61,10 +63,11 @@ To deploy this app live on Render:
 5. Deploy the service
 6. Your app will be live at the provided URL
 
+## Version History
+
+- **v1.0**: Initial version using TextBlob for sentiment analysis
+- **v2.0**: Upgraded to use Hugging Face pre-trained ML model for improved accuracy
+
 ## License
 
 MIT License
-=======
-# sentiment-analyzer
-Real-time sentiment analysis web app using Python, Flask, and NLP to classify text as positive, negative, or neutral.
->>>>>>> origin/main
